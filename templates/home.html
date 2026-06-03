@@ -14,10 +14,14 @@
 
 {% block content %}
     <h1>Home page using Jinja Tags</h1>
+    <!-- <div><strong>Name:</strong>{{ name }}</div>
+    <div><strong>Address:</strong>{{ address }}</div>
+    <div><strong>Telephone:</strong>{{ telephone }}</div>
+    <div><strong>Email:</strong>{{ email }}</div> -->
   
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere saepe numquam, obcaecati corporis adipisci odit architecto repellat? Eius numquam necessitatibus tenetur iste iure! Quis culpa ipsa harum nostrum, nesciunt perspiciatis?</p>
 {% endblock %}
 
 {% block js%}
-    <script src="{% static 'home.js' %}"></script>
+    <script src="{% static 'js/home.js' %}"></script>
 {% endblock js %}

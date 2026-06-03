@@ -15,6 +15,14 @@ class HomePageView(TemplateView):# OOP object oriented programming (inheritance)
     template_name = "home.html" # when variables are inside funtions they turn into attributes
 
 
+    def get_context_data(self, **kwargs):########keyword arguments
+        context = super().get_context_data(**kwargs)
+        context["name"] = "Jesse"
+        context["address"] = "Something 444, CA"
+        context["email"] = "googs.googs" 
+        return context
+
+
 class AboutPageView(TemplateView):
     template_name = "about.html"
 
@@ -24,6 +32,12 @@ class AboutPageView(TemplateView):
 def contact_me(request):
     # return HttpResponse("Hello World from a Function Based View")
     return render(request, "contact.html")
+    
+
+
+
+
+
 
 def get_contact_info(request):
     contact_info =  {

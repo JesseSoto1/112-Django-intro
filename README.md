@@ -22,6 +22,8 @@
 
     both: django-admin startproject NAME_FOLDER
 
+7. python manage.py startapp posts
+
 
 
 touch FILENAME.EXENSION allows you to create files on the terminal.
