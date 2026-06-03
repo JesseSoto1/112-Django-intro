@@ -24,3 +24,13 @@ class AboutPageView(TemplateView):
 def contact_me(request):
     # return HttpResponse("Hello World from a Function Based View")
     return render(request, "contact.html")
+
+def get_contact_info(request):
+    contact_info =  {
+        "name": "John Wilkes Booth",
+        "address":"123 Main St" ,
+        "telephone": "123-123-1234",
+        "email":"osok@gmail.com"
+    }
+
+    return render(request, "contact.html", contact_info)

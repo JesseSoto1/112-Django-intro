@@ -1,12 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
 
-
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock css %}
 
 {% block title %}
     CONTACT PAGE
 {% endblock %}
 
 {% block content %}
- <h1>Contact page using Jinja Tags</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere saepe numquam, obcaecati corporis adipisci odit architecto repellat? Eius numquam necessitatibus tenetur iste iure! Quis culpa ipsa harum nostrum, nesciunt perspiciatis?</p>
+
+ <h1>Contact Page</h1>
+<div>
+    <img width="300" src="https://plus.unsplash.com/premium_vector-1714618927767-b7606cc6c88c?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+
+
+    <div><strong>Name:</strong>{{ name }}</div>
+    <div><strong>Address:</strong>{{ address }}</div>
+    <div><strong>Telephone:</strong>{{ telephone }}</div>
+    <div><strong>Email:</strong>{{ email }}</div>
+</div>
+
 {% endblock content %}

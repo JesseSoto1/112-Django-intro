@@ -14,5 +14,10 @@
 
 {% block content %}
     <h1>Home page using Jinja Tags</h1>
+  
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere saepe numquam, obcaecati corporis adipisci odit architecto repellat? Eius numquam necessitatibus tenetur iste iure! Quis culpa ipsa harum nostrum, nesciunt perspiciatis?</p>
 {% endblock %}
+
+{% block js%}
+    <script src="{% static 'home.js' %}"></script>
+{% endblock js %}
