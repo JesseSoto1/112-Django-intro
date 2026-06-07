@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.urls import reverse
 
 # Create your models here.
 # relational databases -------Tables
@@ -18,3 +19,6 @@ class Post(models.Model):
 
     def __str__(self):
         return f"{self.title} by {self.author}"
+    
+    def get_absolute_url(self):
+        return reverse("post_detail", args=[self.id])#automatically redirect the iser to an specific endpoint when POST request is sent

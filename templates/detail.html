@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/list.css' %}">
+{% endblock %}
+
+{% block title %}
+    
+    Posts {{ single_post.id }}
+
+{% endblock %}
+
+{% block content %}
+    <div class="container d-flex justify-content-center mt-3"></div>
+        <h1>Post #{{ single_post.id }}</h1>
+        <h2>Title: {{ single_post.title }}</h2>
+        <h3>Subtitle: {{ single_post.subtitle }}</h3>
+        <span><strong>Date: {{ single_post.created_on }}</strong></span><br/>
+        <span><strong>Author:{{ single_post.author }} </strong></span><br/>
+        <hr/>
+        <p>{{ single_post.body }}</p>
+        <br/>
+        <a href="{% url 'post_edit' single_post.id %}" class="btn btn-primary">Edit</a>
+        <a href="{% url 'post_delete' single_post.id %}" class="btn btn-danger">Delete</a>
+    </div> 
+
+
+{% endblock %}

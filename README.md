@@ -24,6 +24,12 @@
 
 7. python manage.py startapp posts
 
+8. Models in Django need to be written inside of the models.py file on any application when we finish them we need to run these commands:
+
+
+    1. "python3 manage.py makemigrations" will create a migration interpreting the new models
+    2. "python3 manage.py migrate" - Django will apply the created migration file to the database
+
 
 
 touch FILENAME.EXENSION allows you to create files on the terminal.
